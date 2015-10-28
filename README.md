@@ -5,7 +5,7 @@
 var lightBox1 = function () {
 
     var lightbox = new Popup({
-        target: $('.popup').clone(),
+        target: $('.popup').eq(0).clone(),
         isMask: true,
         isFixed: true,
         maskClick: true

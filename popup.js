@@ -24,7 +24,8 @@
                 this.option.mask
                     .show()
                     .css({
-                        opacity: '.5'
+                        opacity: '.5',
+                        'filter': 'alpha(opacity=50)'
                     });
             }
 
@@ -99,7 +100,7 @@
             });
 
             if (self.option.maskClick) {
-                self.option.mask.on('click', function () {
+                self.option.mask.bind('click', function () {
                     self.hide();
                 });
             }
@@ -109,25 +110,3 @@
     window.Popup = Popup;
 
 })(Zepto || jQuery);
-
-var lightBox1 = function () {
-    var lightbox = new Popup({
-        target: $('.popup').clone(),
-        isMask: true,
-        isFixed: true,
-        maskClick: true
-    });
-    lightbox.basic();
-
-    return {
-        show: function (callback) {
-            lightbox.show(callback);
-        },
-        hide: function (callback) {
-            lightbox.hide(callback);
-        },
-        dom: function () {
-            return lightbox.dom();
-        }
-    }
-}();
