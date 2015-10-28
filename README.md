@@ -1,6 +1,7 @@
 # popup
 
-实例：
+##实例：
+```javascript
 var lightBox1 = function () {
 
     var lightbox = new Popup({
@@ -23,3 +24,4 @@ var lightBox1 = function () {
         }
     }
 }();
+```
